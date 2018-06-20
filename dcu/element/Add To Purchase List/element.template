@@ -1,0 +1,82 @@
+<!-- ko if: $data.initialized() && $data.elements.hasOwnProperty('purchase-list') -->
+  <br><br>
+  <div class="btn-group swm-add-to-wishlist-selector">
+    <!-- ko if:$data.quickViewFromPurchaseList !== undefined -->
+      <!-- ko if:!$data.quickViewFromPurchaseList() -->
+        <button id="cc-prodDetailsAddToPurchaseListSelector" data-backdrop="static" data-bind="disabled: {condition: $data.isAddToPurchaseListDisabled && $data.isAddToPurchaseListDisabled()}, widgetLocaleText:'productAddToPurchaseListText'" class="btn cc-button-secondary">
+        </button>
+        <!-- ko if: $data.user().loggedIn() -->
+	    <button id="cc-prodDetailsAddToPurchaseListDropdown" class="btn cc-button-secondary dropdown-toggle" data-backdrop="static" data-toggle="dropdown"
+	     data-bind="disabled: {condition: $data.isAddToPurchaseListDisabled && $data.isAddToPurchaseListDisabled()}, click: $data.elements['purchase-list'].openAddToPurchaseListDropDownSelector.bind($parent),visible:{condition: $data.quickViewFromPurchaseList !== undefined ? !$data.quickViewFromPurchaseList(): true}">
+	     <span class="caret"></span>
+	     <span class="sr-only" data-bind="widgetLocaleText:'productAddToPurchaseListText'"></span>
+	    </button>
+	    <!-- /ko -->
+      <!-- /ko -->
+      <!-- ko if:$data.quickViewFromPurchaseList() -->
+        <button id="cc-prodDetailsAddToPurchaseList" data-backdrop="static" data-dismiss="modal" data-bind="disabled:{condition:!validateAddToCart(),click:$data.elements['purchase-list'].addItemToGivenPurchaseList.bind($data)}, widgetLocaleText:'productAddToPurchaseListText'" class="cc-button-secondary">
+        </button>
+      <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if:$data.quickViewFromPurchaseList == undefined -->
+      <button id="cc-prodDetailsAddToPurchaseListSelector" data-backdrop="static" data-bind="disabled: {condition: $data.isAddToPurchaseListDisabled && $data.isAddToPurchaseListDisabled()}, widgetLocaleText:'productAddToPurchaseListText'" class="btn cc-button-secondary">
+      </button>
+      <!-- ko if: $data.user().loggedIn() -->
+	  <button id="cc-prodDetailsAddToPurchaseListDropdown" class="btn cc-button-secondary dropdown-toggle" data-backdrop="static" data-toggle="dropdown"
+	    data-bind="disabled: {condition: $data.isAddToPurchaseListDisabled && $data.isAddToPurchaseListDisabled()}, click: $data.elements['purchase-list'].openAddToPurchaseListDropDownSelector.bind($parent),visible:{condition: $data.quickViewFromPurchaseList !== undefined ? !$data.quickViewFromPurchaseList(): true}">
+	    <span class="caret"></span>
+	    <span class="sr-only" data-bind="widgetLocaleText:'productAddToPurchaseListText'"></span>
+	  </button>
+    <!-- /ko -->
+    <!-- /ko -->
+	
+    <!-- ko if: $data.user().loggedIn() -->
+    <ul class="dropdown-menu cc-scrollable-menu" role="menu" aria-labelledby="cc-prodDetailsAddToPurchaseListDropdown">
+      <li role="presentation" class="dropdown-header" data-bind="widgetLocaleText: 'myPurchaseListText'"></li>
+      <!-- ko foreach : {data : $data.elements['purchase-list'].purchaseListArray, as : 'purchaseList'} -->
+       <li role="presentation">
+         <a role="menuitem" tabindex="-1" href="#" data-bind="text: purchaseList.purchaseListName,
+         click: $parent['elements']['purchase-list'].addItemToPurchaseList.bind($parent, purchaseList)"></a>
+       </li>
+      <!-- /ko -->
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="" data-bind="widgetLocaleText: 'createNewPurchaseListText',
+        click: $parent['elements']['purchase-list'].addToNewPurchaseListClick.bind($parent)"></a></li>
+    </ul>
+    <!-- /ko -->
+  </div>
+<!-- /ko -->
+
+<div class="modal fade" id="CC-newPurchaseList-modal" tabindex="-1" role="alert">
+ <div class="modal-dialog" id="CC-newPurchaseList-modal-dialog">
+    <div class="modal-content" id="CC-newPurchaseListModalContent">
+      <div class="modal-header" id="CC-newPurchaseList-modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="CC-newPurchaseList-modal-headerClose" aria-hidden="true">&times;</button>
+        <h4 data-bind="widgetLocaleText:'newPurchaseListModalTitle'" id="CC-newPurchaseList-modal-headerText"></h4>
+      </div>
+      <hr class="hr-without-margin">
+      <div class="modal-body" id="CC-newPurchaseList-modal-modalBody">
+        <div><span data-bind="widgetLocaleText:'listNameText'"></span></div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <span class="text-danger visible-xs" id="CC-purchaseListName"  role="alert"></span>
+            <div class="control">
+              <input id="CC-purchaseList-name" type="text" class="col-md-12 form-control" data-bind="widgetLocaleText: {attr: 'placeholder', value: 'purchaseListNameText'}"/>
+            </div>
+          </div>
+          <div class="text-danger col-md-4 cc-alert" id="cc-purchaseListName-error" role="alert">
+            <span data-bind="widgetLocaleText:'listNameMandatoryText'">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" id="CC-newPurchaseList-modal-footer">
+        <button class="btn cc-button-secondary" id="CC-newPurchaseList-modal-cancel" data-bind="click: $parent.handleModalNo">
+          <span id="CC-newPurchaseList-modal-discard" data-bind="widgetLocaleText:'purchaseListModalCancel'"></span>
+        </button>
+        <button class="btn cc-button-primary" id="CC-newPurchaseList-modal-submit" data-bind="click: $parent.handleModalYes">
+          <span id="CC-newPurchaseList-modal-save" data-bind="widgetLocaleText:'purchaseListModalCreateList'"></span>
+        </button>
+    </div>
+    </div>
+  </div>
+</div>

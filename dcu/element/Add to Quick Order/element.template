@@ -1,0 +1,7 @@
+<!-- ko if: initialized() && $data.elements.hasOwnProperty('product-add-to-quick-order') -->
+<div  id="CC-prodDetails-addToQuickOrder" data-bind="inTabFlow:(validateAddToCart())" >
+  <button id="cc-prodDetailsAddToQuickOrder" data-bind="disabled: {condition: !validateAddToCart(), click: $data.elements['product-add-to-quick-order'].addToQuickOrder.bind($data)}" class="cc-button-primary">
+      <span id="cc-prodDetails-addToQuickOrder" data-bind="widgetLocaleText: 'addToQuickOrderText'"></span>
+  </button>
+</div>
+<!-- /ko -->

@@ -1,0 +1,17 @@
+{
+  "configuration": {
+    "logoPageLink": "home",
+    "logoAltText": "Logo Alternative Text",
+    "logoImage": "/img/logo.png",
+    "giftItemImageURL": "/img/GWP_GiftWithPurchase.jpg",
+    "requiredLinks": [
+      "home",
+      "aboutUs",
+      "returns",
+      "shipping",
+      "contactUs",
+      "privacy"
+    ]
+  },
+  "displayName": "Header - Basic Widget"
+}

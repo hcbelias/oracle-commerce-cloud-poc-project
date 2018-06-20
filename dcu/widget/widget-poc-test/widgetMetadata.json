@@ -1,0 +1,17 @@
+{
+  "imports": [
+    "product",
+    "productTypes"
+  ],
+  "translations": [
+    {
+      "name": "widget-poc-test",
+      "language": "en"
+    }
+  ],
+  "availableToAllPages": true,
+  "jsEditable": true,
+  "minWidth": 1,
+  "globalEnabled": true,
+  "config": {}
+}

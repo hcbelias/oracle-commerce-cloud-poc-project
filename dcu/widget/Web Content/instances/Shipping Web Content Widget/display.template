@@ -1,0 +1,5 @@
+<div>
+  <!-- ko if: $data.hasOwnProperty("sourceMedia") && sourceMedia && sourceMedia() -->
+    <div data-bind="template: { name: sourceMedia }"></div>
+  <!-- /ko -->
+</div>

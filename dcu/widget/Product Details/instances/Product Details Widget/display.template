@@ -1,0 +1,113 @@
+<!-- ko setContextVariable: {name: 'elementConfig', value: {
+  "100001": {"id": "100001"},
+  "100002": {"id": "100002"},
+  "100003": {"id": "100003"},
+  "100004": {"id": "100004"},
+  "100005": {"id": "100005"},
+  "200001": {"id": "200001"},
+  "200003": {"id": "200003"},
+  "200004": {"id": "200004"}
+}} --><!-- /ko -->
+
+<!-- ko if: loaded -->
+<div class="templateRegion" id="cc-product-details" data-oc-id="cc-product-details">
+<!-- ko if: product -->
+
+  <!-- oc layout: panels -->
+  <div class="row">
+
+    <div class="oc-panel col-md-7" data-oc-id="panel-0-0">
+
+      <!-- oc section: product-back-link -->
+        <div data-bind="element: 'product-back-link'" class="back-link"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-image -->
+        <div data-bind="element: 'product-image'" class="text-center"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-image-carousel -->
+        <div data-bind="element: 'product-image-carousel'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-social-sharing-2 --><div data-bind="element: 'product-social-sharing-2'"></div>
+      <!-- /oc -->
+
+    </div>
+
+
+    <div class="oc-panel col-md-5" data-oc-id="panel-0-1">
+
+      <!-- oc section: product-title -->
+        <h1 data-bind="element: 'product-title'"></h1>
+      <!-- /oc -->
+
+      <!-- oc section: product-price -->
+<div data-bind="if: !priceRange() &amp;&amp; (!salePrice || salePrice() === null)" data-oc-id="product-list-price-only" role="alert">
+<span data-bind="element: 'product-list-price',id: '200003'"></span>
+
+</div>
+
+<div data-bind="if: !priceRange() &amp;&amp; (salePrice &amp;&amp; salePrice() !== null)" data-oc-id="product-on-sale" role="alert">
+<span data-bind="element: 'product-sale-price'"></span>
+
+</div>
+
+<div data-bind="if: priceRange()" data-oc-id="product-price-varies" role="alert"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-shipping-surcharge -->
+        <div data-bind="if: shippingSurcharge()">
+          <span data-bind="element: 'product-shipping-surcharge'"></span>
+        </div>
+      <!-- /oc -->
+
+      <!-- oc section: product-description -->
+        <div data-bind="element: 'product-description'"></div>
+        
+            <md-button class="md-raised md-primary">Primary</md-button>
+      <!-- /oc -->
+
+      <!-- oc section: product-add-to-cart -->
+        <div data-bind="element: 'product-add-to-cart'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-variants -->
+        <div data-bind="element: 'product-variants'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-quantity -->
+        <div data-bind="element: 'product-quantity'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-long-description -->
+        <div data-bind="element: 'product-long-description'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-stock-availability -->
+        <div data-bind="if: showStockStatus() &amp;&amp; stockStatus()" data-oc-id="product-in-stock">
+          <div data-bind="element: 'product-in-stock-message'"></div>
+        </div>
+
+        <div data-bind="if: (showStockStatus() &amp;&amp; !stockStatus())" data-oc-id="product-out-of-stock">
+          <div data-bind="element: 'product-out-of-stock-message'"></div>
+        </div>
+      <!-- /oc -->
+
+      <!-- oc section: product-add-to-space -->
+        <div data-bind="element: 'product-add-to-space'"></div>
+      <!-- /oc -->
+
+      <!-- oc section: product-social-sharing -->
+        <div data-bind="element: 'product-social-sharing'"></div>
+      <!-- /oc -->
+
+    </div>
+
+
+  </div>
+  <!-- /oc -->
+  
+<!-- /ko -->
+</div>
+<!-- /ko -->
