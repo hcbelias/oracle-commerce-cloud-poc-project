@@ -20,7 +20,7 @@
         <!-- oc layout: panels -->
   <div class="row">
 
-    <div class="oc-panel col-md-3" data-oc-id="panel-0-0">
+    <div class="oc-panel col-md-6" data-oc-id="panel-0-0">
 
       <!-- oc section: login-registration -->
             <div data-bind="element: 'login-registration'"></div>
@@ -31,11 +31,6 @@
 
     <div class="oc-panel col-md-4" data-oc-id="panel-0-1">
 
-    </div>
-
-
-    <div class="oc-panel col-md-3" data-oc-id="panel-0-2">
-
       <!-- oc section: header-currency-picker -->
             <div data-bind="element: 'header-currency-picker'"></div>
       <!-- /oc -->
@@ -43,7 +38,7 @@
     </div>
 
 
-    <div class="oc-panel col-md-2" data-oc-id="panel-0-3">
+    <div class="oc-panel col-md-2" data-oc-id="panel-0-2">
 
       <!-- oc section: header-language-picker -->
             <div data-bind="element: 'header-language-picker'"></div>
@@ -56,16 +51,11 @@
 
   <div class="row">
 
-    <div class="oc-panel col-md-5" data-oc-id="panel-1-0">
+    <div class="oc-panel col-md-12" data-oc-id="panel-1-0">
 
       <!-- oc section: header-dropdown-minicart -->
            <div data-bind="element: 'header-dropdown-minicart'"></div>
       <!-- /oc -->
-
-    </div>
-
-
-    <div class="oc-panel col-md-7" data-oc-id="panel-1-1">
 
     </div>
 
