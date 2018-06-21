@@ -1,9 +1,0 @@
-{
-  "repositoryId": "widget-poc_v1",
-  "widgetType": "widget-poc",
-  "version": 1,
-  "displayName": "widget-poc-test",
-  "global": false,
-  "source": 101,
-  "javascript": "widget-poc"
-}

@@ -91,6 +91,7 @@ function getAllComponentLess () {
 
     // Need to do a bit of tinkering to replace the #<widget>-<instance> CSS
     // selector... (This does a similar thing to widgetPutter.js)
+	console.log(path);
     const less = readFile(path).replace(
         constants.widgetInstanceSubstitutionValue,
         `#${instanceMD.descriptorRepositoryId}-${instanceMD.repositoryId}`)

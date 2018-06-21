@@ -26,6 +26,9 @@
             <div data-bind="element: 'login-registration'"></div>
       <!-- /oc -->
 
+      <!-- oc section: login-registration-v2 --><span data-bind="element: 'login-registration-v2'"></span>
+      <!-- /oc -->
+
     </div>
 
 

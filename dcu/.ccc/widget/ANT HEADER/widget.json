@@ -1,9 +1,0 @@
-{
-  "repositoryId": "ant_header_v1",
-  "widgetType": "ant_header",
-  "version": 1,
-  "displayName": "ANT HEADER",
-  "global": false,
-  "source": 101,
-  "javascript": "widget"
-}
