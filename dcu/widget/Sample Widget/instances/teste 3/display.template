@@ -1,0 +1,5 @@
+<div>
+<button data-bind="click:helloWorld"></button>
+<marquee>This text will scroll from right to left</marquee>
+
+</div>

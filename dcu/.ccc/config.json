@@ -1,5 +1,5 @@
 {
-  "node": "https://ccadmin-zaja.oracleoutsourcing.com/",
+  "node": "https://ccadmin-zaja.oracleoutsourcing.com",
   "commerceCloudVersion": "18.2",
   "packageVersion": "1.0.6"
 }
