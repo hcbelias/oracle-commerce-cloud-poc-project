@@ -22,7 +22,8 @@
 
     <div class="oc-panel col-md-6" data-oc-id="panel-0-0">
 
-      <!-- oc section: login-registration-v2 --><span data-bind="element: 'login-registration-v2'"></span>
+
+      <!-- oc section: login-sso --><span data-bind="element: 'login-sso'"></span>
       <!-- /oc -->
 
     </div>

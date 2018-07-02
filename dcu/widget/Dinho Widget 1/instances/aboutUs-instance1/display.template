@@ -1,0 +1,4 @@
+<div>
+  <p>yet another custom widget</p>
+  <button data-bind="click:alertButton, text:name"></button>
+</div>
