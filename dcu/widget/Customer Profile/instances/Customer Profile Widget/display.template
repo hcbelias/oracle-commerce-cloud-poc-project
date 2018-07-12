@@ -4,23 +4,48 @@
   <br/>
   <div id="CC-customerAccount-details">
     <div class="row">
-      <div class="col-sm-6">
-        <div id="CC-customerProfile-orderDetails-section" class="cc-customerProfile-order-details" 
-          data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileOrders.template') , templateUrl: ''}">
+      <div class="col-sm-3 hope-sidenav">
+        <div class="sidenav-header-container">
+
         </div>
-        <br/>
+        <ul>
+          <li>
+            Minha Conta
+          </li>
+          <li>
+            Catálogo de Endereços
+          </li>
+          <li>
+            Meus Pedidos
+          </li>
+          <li>
+            Meu Wishlist
+          </li>
+          <li>
+            Meus Créditos
+          </li>
+          <li>
+            Minhas Assinaturas
+          </li>
+        </ul>
       </div>
-      <div class="col-sm-6">
-        <!-- ko if: showSWM -->
-        <div id="CC-customerProfile-spaceSettings-section" class="cc-customerProfile-space-settings" 
-            data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileSpaceSettings.template') , templateUrl: ''}">
+      <div class="col-sm-9">
+        <!--<div class="col-sm-6">
+          <div id="CC-customerProfile-orderDetails-section" class="cc-customerProfile-order-details" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileOrders.template') , templateUrl: ''}">
+          </div>
+          <br/>
         </div>
-        <br/>
-        <!-- /ko -->
+        <div class="col-sm-6">
+          
+          <div id="CC-customerProfile-spaceSettings-section" class="cc-customerProfile-space-settings" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileSpaceSettings.template') , templateUrl: ''}">
+          </div>
+          <br/>
+          
+        </div>
+        <div id="CC-customerProfile-profileDetails-section" class="row cc-customerProfile-profile-details" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileDetails.template') , templateUrl: ''}">
+        </div>
+      -->
       </div>
-    </div>
-    <div id="CC-customerProfile-profileDetails-section" class="row cc-customerProfile-profile-details" 
-        data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileDetails.template') , templateUrl: ''}">
     </div>
   </div>
 </div>
