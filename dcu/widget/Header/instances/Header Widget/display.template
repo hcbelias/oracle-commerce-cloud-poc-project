@@ -25,6 +25,7 @@
 
       <!-- oc section: login-sso --><span data-bind="element: 'login-sso'"></span>
       <!-- /oc -->
+	  <div data-bind="element: 'login-registration'"></div>
 
     </div>
 
