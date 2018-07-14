@@ -41,7 +41,6 @@
             <br/>
             </div>
             <div class="row">
-
               <div id="CC-customerProfile-spaceSettings-section"
                 class="cc-customerProfile-space-settings" data-bind="template: {
                 name:
