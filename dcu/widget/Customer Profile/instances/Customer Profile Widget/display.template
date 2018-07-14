@@ -5,26 +5,26 @@
   <div id="CC-customerAccount-details">
     <div class="row">
       <div class="col-sm-3 hope-sidenav">
-        <div class="sidenav-header-container">
-
+        <div class="sidenav-element-container">
+USUARIO LOGADO COM FOTO
         </div>
         <ul>
-          <li>
+          <li class="sidenav-element-container">
             Minha Conta
           </li>
-          <li>
+          <li class="sidenav-element-container">
             Cat·logo de EndereÁos
           </li>
-          <li>
+          <li class="sidenav-element-container">
             Meus Pedidos
           </li>
-          <li>
+          <li class="sidenav-element-container">
             Meu Wishlist
           </li>
-          <li>
+          <li class="sidenav-element-container">
             Meus CrÈditos
           </li>
-          <li>
+          <li class="sidenav-element-container">
             Minhas Assinaturas
           </li>
         </ul>

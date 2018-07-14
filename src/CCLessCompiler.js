@@ -41,20 +41,20 @@ exports.compileAuto = function () {
  *
  * @returns Compile CSS for Storefront including local modifications.
  */
-function doCompile() {
+function doCompile () {
   endPointTransceiver.getActiveTheme().then((result) => {
     const theme = result.data.items[0]
 
     // Older versions of CCAdminUI API might not support the less compilation
     // endpoint.
     if (!endPointTransceiver.compileLess) {
-      error("lessCompilationUnsupportedError", { node: endPointTransceiver.instance })
+      error("lessCompilationUnsupportedError", {node: endPointTransceiver.instance})
       return
     }
 
     if (theme) {
       const name = theme.name
-      info("activeThemeText", { name })
+      info("activeThemeText", {name})
 
       // Collect our local less files for components and theme then compile.
       const payload = {
@@ -63,7 +63,7 @@ function doCompile() {
       }
 
       if (payload.src && payload.themeSrc) {
-        info("compilingComponentAndThemeLess", { theme: name })
+        info("compilingComponentAndThemeLess", {theme: name})
       } else {
         info("compilingComponentLess")
       }
@@ -83,7 +83,7 @@ function doCompile() {
  *
  * @returns {string} All non-compiled component less code.
  */
-function getAllComponentLess() {
+function getAllComponentLess () {
   let componentLess = ""
   // Get a big string of widget + element + stack Less.
   glob("widget/**/*.less").forEach((path) => {
@@ -91,14 +91,11 @@ function getAllComponentLess() {
 
     // Need to do a bit of tinkering to replace the #<widget>-<instance> CSS
     // selector... (This does a similar thing to widgetPutter.js)
-    console.log(path);
-    if (instanceMD) {
-      const less = readFile(path).replace(
+    const less = readFile(path).replace(
         constants.widgetInstanceSubstitutionValue,
         `#${instanceMD.descriptorRepositoryId}-${instanceMD.repositoryId}`)
 
-      componentLess += less + "\n"
-    }
+    componentLess += less + "\n"
   })
 
   // Ensure that variables are scooped up first.
@@ -119,7 +116,7 @@ function getAllComponentLess() {
  * @param name Name of Theme
  * @returns {string} Uncompiled Less code.
  */
-function getAllThemeLess(name) {
+function getAllThemeLess (name) {
   let themeLess = ""
 
   // If we have the active theme locally, get a big string of theme Less.
