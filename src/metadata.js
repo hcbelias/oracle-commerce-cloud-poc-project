@@ -199,21 +199,30 @@ function getMetadataPath(path, type) {
   const baseDir = splitDirs[0], subDir = splitDirs[1]
   const tokens = subDir.split("/")
 
+  console.log(splitDirs);
+  console.log(baseDir);
+  console.log(subDir);
+  console.log(tokens);
+
   // Figure out the rest of the path based on the type of metadata.
   switch (type) {
     case constants.configMetadataJson :
+    console.log('config metadatajson')
       return `${baseDir}/${constants.trackingDir}/${type}`
 
     case constants.elementMetadataJson :
     case constants.stackInstanceMetadataJson :
     case constants.themeMetadataJson :
+    console.log('elementy stack theme metadatajson')
       return `${baseDir}/${constants.trackingDir}/${subDir}/${type}`
 
     case constants.widgetMetadataJson :
+    console.log('widget metadatajson')
       const widgetBaseDir = tokens.slice(0, tokens.indexOf("widget") + 2).join("/")
       return `${baseDir}/${constants.trackingDir}/${widgetBaseDir}/${type}`
 
     case constants.widgetInstanceMetadataJson :
+    console.log('widget instance metadatajson')
       const widgetInstanceBaseDir = tokens.slice(0, tokens.indexOf("instances") + 2).join("/")
       return `${baseDir}/${constants.trackingDir}/${widgetInstanceBaseDir}/${type}`
   }
@@ -459,6 +468,7 @@ function readMetadataFromDisk(path, type, excludeEtag) {
   // Figure out where the metadata ought to be.
   const metadataPath = getMetadataPath(path, type)
 
+  console.log(metadataPath);
   // See if it exists.
   if (exists(metadataPath)) {
 
@@ -469,6 +479,9 @@ function readMetadataFromDisk(path, type, excludeEtag) {
 
     return json
   } else {
+    console.log(path);
+    console.log(type);
+    console.log(excludeEtag);
 
     // Can't find the metadata.
     return null

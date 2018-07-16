@@ -1,0 +1,55 @@
+<!-- ko if: (user().loggedIn() || user().isUserSessionExpired()) -->
+<div id="CC-customerAccount">
+  <h2 data-bind="widgetLocaleText:'myAccountText'" id="CC-customerAccount-title"></h2>
+  <br/>
+  <div id="CC-customerAccount-details">
+    <div class="row">
+      <div class="col-sm-3 hope-sidenav">
+        <div class="sidenav-element-container">
+USUARIO LOGADO COM FOTO
+        </div>
+        <ul>
+          <li class="sidenav-element-container">
+            Minha Conta
+          </li>
+          <li class="sidenav-element-container">
+            Cat·logo de EndereÁos
+          </li>
+          <li class="sidenav-element-container">
+            Meus Pedidos
+          </li>
+          <li class="sidenav-element-container">
+            Meu Wishlist
+          </li>
+          <li class="sidenav-element-container">
+            Meus CrÈditos
+          </li>
+          <li class="sidenav-element-container">
+            Minhas Assinaturas
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+          <div class="row">
+          <div id="CC-customerProfile-orderDetails-section" class="cc-customerProfile-order-details" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileOrders.template') , templateUrl: ''}">
+          </div>
+          <br/>
+        </div>
+        <div class="row">
+          
+          <div id="CC-customerProfile-spaceSettings-section" class="cc-customerProfile-space-settings" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileSpaceSettings.template') , templateUrl: ''}">
+          </div>
+          <br/>
+          
+        </div>
+        <div class="row">
+
+        <div id="CC-customerProfile-profileDetails-section" class="row cc-customerProfile-profile-details" data-bind="template: { name: templateAbsoluteUrl('/templates/customerProfileDetails.template') , templateUrl: ''}">
+        </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,10 @@
+{
+  "repositoryId": "sample_v1",
+  "widgetType": "sample",
+  "version": 1,
+  "displayName": "Sample Widget",
+  "global": false,
+  "i18nresources": "sample",
+  "source": 101,
+  "javascript": "sample"
+}
